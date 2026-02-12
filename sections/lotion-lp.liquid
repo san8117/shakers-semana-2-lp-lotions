@@ -1,0 +1,40 @@
+<header>
+  <h1>{{page.title}}</h1>
+</header>
+
+<section>
+   <main>
+    <p>{{page.content}}</p>
+
+    {% assign products = collections.all.products %}
+    
+   {%for produtos in products %}
+    <span>{{product}}</span>
+    {%endfor%}
+   </main>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+{% schema %}
+{
+    "name": "lotion-lp",
+    "settings": [
+        
+        ],
+
+    "presets": [{
+        "name": "lotion-lp"
+    }
+        
+    ]
+}
+{% endschema %}
