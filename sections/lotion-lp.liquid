@@ -1,25 +1,33 @@
+{{'lotion-lp.css' | asset_url | stylesheet_tag}}
+ {% liquid
+    assign collection = collections[section.settings.all_collections].all.products
+%}
+
 <header>
-  <h1>{{page.title}}</h1>
+    <h1>{{page.title}}</h1>
 </header>
 
 <section>
-   <main>
-  <span>oi</span>
+    <main>
+        <p>{{page.content}}</p>
+    </main>
 
-    {% assign products = collections.all.products %}
-    
-   {%for produtos in products %}
-    <span>{{product}}</span>
-    {%endfor%}
-   </main>
+
+   
+
+
+   
+
+    {% for product in collection %}
+        <div class="produto_do_card">
+            <h3>{{ product.title }}</h3>
+            <p>{{ product.price }}</p>
+            <img src={{product.image}} alt={{product.alt}}>
+            <p>{{ product.url }}</p>
+        </div>
+    {% endfor %}
+
 </section>
-
-
-
-
-
-
-
 
 
 
@@ -28,12 +36,23 @@
 {
     "name": "lotion-lp",
     "settings": [
-        
+            {
+                "type" :"collection",
+                "id": "all_collections",
+                "label": "Coleção"
+            },
+
+            {
+                "type": "product",
+                "id": "all_products",
+                "label": "Produtos"
+            }
         ],
 
     "presets": [{
         "name": "lotion-lp"
     }
+    
         
     ]
 }
