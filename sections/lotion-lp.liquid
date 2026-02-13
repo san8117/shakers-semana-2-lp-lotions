@@ -1,30 +1,36 @@
 {{'lotion-lp.css' | asset_url | stylesheet_tag}}
- {% liquid
-    assign collection = collections[section.settings.all_collections].all.products
-%}
 
-<header>
+
+
+{% assign collection = section.settings.all_collections %}
+{%assign product = section.settings.all_products %}
+
+
+
+<header class="cabecalho">
     <h1>{{page.title}}</h1>
 </header>
+
+<br>
 
 <section>
     <main>
         <p>{{page.content}}</p>
+
+        <h2>{{collection.title}}</h2>
+        <p>{{collection.description}}</p>
     </main>
 
 
-   
+    {% for product in collection.products%}
 
-
-   
-
-    {% for product in collection %}
-        <div class="produto_do_card">
-            <h3>{{ product.title }}</h3>
-            <p>{{ product.price }}</p>
-            <img src={{product.image}} alt={{product.alt}}>
-            <p>{{ product.url }}</p>
+     <div>
+        
+        <h3>{{product.title}} </h3>
+        <p>{{product.price | money}}</p>
+        <img src="{{product.featured_image |  image_url: width: "120px"}}" alt="{{product.featured_image.alt}}" />
         </div>
+        
     {% endfor %}
 
 </section>
