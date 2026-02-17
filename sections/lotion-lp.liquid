@@ -5,25 +5,26 @@
 
 
 <body>
-    <section>
+    <section class="conteudo-lp">
 
         <main>
          <p>{{page.content}}</p>
+         <br>
          <br>
 
         <div class="produto-principal">
                 {% assign product = section.settings.locao-principal%}
                 <img src="{{product.featured_image | image_url: width: 150, height: 100}}"alt="{{product.featured_image.alt}}"/>
                 <h2>{{product.title}}</h2>
-                <p>{{product.price | money}}</p>
-                <a href="{{product.url}}">{{product.title}}</a>
+                <p><b>Preço:</b>{{product.price | money}}</p>
+                <a href="{{product.url}}">Saiba Mais</a>
         </div>
 
         
 
         <section class="info-colecao">
         {% assign collection = section.settings.colecao%}
-        <h2>{{collection.title}}</h2>
+        <h3>{{collection.title}}</h3>
         <p>{{collection.description}}</p>
 
         </section>
@@ -33,17 +34,17 @@
         </main>
 
 
-        {% for product in collection.products%}
-
-            <div class="produtos-colecao">
-
-            <img src="{{product.featured_image |  image_url: width: 100, height: 80}}" alt="{{product.featured_image.alt}}" />
-            <h3>{{product.title}} </h3>
-            <p>{{product.price | money}}</p>
-
+       
+            <div class="colecao">
+                {% for product in collection.products%}
+                    <div class="produtos-colecao">
+                    <img src="{{product.featured_image |  image_url: width: 100, height: 80}}" alt="{{product.featured_image.alt}}" />
+                    <h3>{{product.title}} </h3>
+                    <p><b>Preço:</b>{{product.price | money}}</p>
+                    <a href="{{product.url}}">Saiba Mais</a>
+                    </div>
+                {% endfor %}
             </div>
-        
-        {% endfor %}
         
     </section>
 </body>

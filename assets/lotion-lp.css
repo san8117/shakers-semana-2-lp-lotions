@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #fae5dc;
+    background-color: #fbf7f5;
 }
 
 
@@ -14,10 +14,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #b0886b;
+    background-color: black;
     width: 100%;
     height: 60px;
-    color: #edcb9c;
+    color: white;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -29,4 +29,130 @@ body {
 }
 
 
+.conteudo-lp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3rem;
+    
+}
 
+.conteudo-lp main p {
+    color: black;
+    margin-top: 1rem;
+}
+
+
+.produto-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border: black solid 1px;
+    border-radius: 2px;
+    box-shadow: gray 2px 1px 2px 2px;
+   
+}
+
+.produto-principal h2 {
+    
+    margin-top: 5px;
+
+}
+
+.produto-principal h2,p {
+    font-size: small;
+}
+
+.produto-principal img {
+    border-radius: 0.3rem;
+}
+
+
+.produto-principal a {
+    margin-top: 0.5rem;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    
+    
+}
+
+
+.produto-principal a:hover {
+    background-color: black;
+    color: white;
+    border-radius: 2px;
+    transform: scale(1.1);
+    transition: ease-in-out 0.5s;
+    
+}
+
+.info-colecao {
+   margin-top: 2rem;
+   text-align: center;
+}
+
+.colecao {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 2rem;
+    
+}
+
+
+.produtos-colecao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border: black solid 1px;
+    border-radius: 2px;
+    box-shadow: gray 2px 1px 2px 2px;
+    margin-top: 1rem;
+    
+    
+    
+    
+}
+
+.produtos-colecao h3 {
+    margin: 1rem;
+    font-size: medium;
+}
+
+.produtos-colecao img {
+    width: 120px;
+    height: 100px;
+   
+    
+}
+
+
+.produtos-colecao a {
+    margin-top: 3px;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: small;
+    
+    
+}
+
+
+.produtos-colecao a:hover {
+    background-color: black;
+    color: white;
+    border-radius: 2px;
+    transform: scale(1.1);
+    transition: ease-in-out 0.5s;
+    
+}
