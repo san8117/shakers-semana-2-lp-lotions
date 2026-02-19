@@ -9,15 +9,16 @@
 
         <main>
          <p>{{page.content}}</p>
-         <br>
-         <br>
+       
 
-        <div class="produto-principal">
-                {% assign product = section.settings.locao-principal%}
-                <img src="{{product.featured_image | image_url: width: 150, height: 100}}"alt="{{product.featured_image.alt}}"/>
-                <h2>{{product.title}}</h2>
-                <p><b>Preço:</b>{{product.price | money}}</p>
-                <a href="{{product.url}}">Saiba Mais</a>
+        <div class="produto-principal-container">
+            <div class="produto-principal">
+                    {% assign product = section.settings.locao-principal%}
+                    <img src="{{product.featured_image | image_url: width: 150, height: 100}}"alt="{{product.featured_image.alt}}"/>
+                    <h2>{{product.title}}</h2>
+                    <p><b>Preço:</b>{{product.price | money}}</p>
+                    <a href="/pages/product-lp">Saiba Mais</a>
+            </div>
         </div>
 
         

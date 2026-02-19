@@ -1,6 +1,16 @@
 {{'home-lp.css' | asset_url | stylesheet_tag}}
 
-<header class="cabecalho"><a href="./lotion-lp.liquid">Páginas de Loções</a></header>
+<header class="cabecalho">
+    <h1>Home</h1>
+</header>
+
+
+<div class="conteudo-home-container">
+    <div class="conteudo-home">
+        <img src={{"locoes.jpg" | asset_url }} alt="imagem de loções">
+        <a href="/pages/lotion-lp">Páginas de Loções</a>
+    </div>
+</div>
 
 
 {% schema %}

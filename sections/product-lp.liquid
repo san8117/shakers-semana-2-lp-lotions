@@ -1,0 +1,30 @@
+
+{%assign produto_escolhido = product %}
+
+<div class="produto">
+    <img src="{{produto_escolhido.featured_image |  image_url: width: 30 }}" alt="{{produto_escolhido.featured_image.alt}}">
+   
+</div>
+
+ <div class="compra">
+    <h2>{{produto_escolhido.title}}</h2>
+    <p><b>Preço:</b>{{produto_escolhido.price |  money}}</p>
+    <button>Comprar</button>
+
+ </div>
+
+
+
+
+
+{% schema %}
+{
+    "name": "product-lp",
+    "settings": [],
+    "presets": [
+        {
+            "name": "product-lp"
+        }
+    ]
+}
+{% endschema %}
