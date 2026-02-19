@@ -1,9 +1,0 @@
-{
-    "sections": {
-        "product" : {
-            "type": "product-lp",
-            "settings": {}
-        }
-    },
-    "order": ["product"]
-}
