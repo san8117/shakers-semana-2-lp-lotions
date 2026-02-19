@@ -1,17 +1,21 @@
+{{'product-lp.css' | asset_url | stylesheet_tag}}
 
-{%assign produto_escolhido = product %}
+{% assign product = all_products['locoes'] %}
 
-<div class="produto">
-    <img src="{{produto_escolhido.featured_image |  image_url: width: 30 }}" alt="{{produto_escolhido.featured_image.alt}}">
-   
+
+<div class="product-container">
+    <div class="produto">
+        <img src="{{product.featured_image |  image_url: width: 30 }}" alt="{{product.featured_image.alt}}">
+    
+    </div>
+    
+     <div class="compra">
+        <h2>{{product.title}}</h2>
+        <p><b>Preço:</b>{{product.price |  money}}</p>
+        <button>Comprar</button>
+    
+     </div>
 </div>
-
- <div class="compra">
-    <h2>{{produto_escolhido.title}}</h2>
-    <p><b>Preço:</b>{{produto_escolhido.price |  money}}</p>
-    <button>Comprar</button>
-
- </div>
 
 
 
