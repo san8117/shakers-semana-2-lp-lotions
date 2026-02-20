@@ -32,13 +32,21 @@ body {
 }
 
 
+
+
 .compra {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-top: 1.5rem;
+    
   
+}
+
+.compra h2 {
+    font-size: larger;
+    margin-bottom: 1rem;
 }
 
 

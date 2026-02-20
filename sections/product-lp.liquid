@@ -1,14 +1,11 @@
 {{'product-lp.css' | asset_url | stylesheet_tag}}
 
 
-
-
 <div class="product-container">
 
-    {%assign product = all_products['locao'].collection %}
  
     <div class="produto">
-        <img src="{{product.featured_image |  image_url: width: 30 }}" alt="{{product.featured_image.alt}}">
+        <img src="{{product.featured_image |  image_url: width: 300 }}" alt="{{product.featured_image.alt}}">
     
     </div>
     

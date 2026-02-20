@@ -92,9 +92,7 @@ body {
 
 
 .produto-principal a:hover {
-    background-color: black;
-    color: white;
-    border-radius: 2px;
+    color: black;
     transform: scale(1.1);
     transition: ease-in-out 0.5s;
     
@@ -134,16 +132,22 @@ body {
     
 }
 
-.produtos-colecao h3 {
-    margin: 1rem;
-    font-size: medium;
-}
 
 .produtos-colecao img {
     width: 120px;
     height: 100px;
    
     
+}
+
+.produtos-colecao h3 {
+    font-size: small;
+    margin-top: 3px;
+}
+
+.produtos-colecao p {
+    font-size: smaller;
+    margin-top: 3px;
 }
 
 
@@ -159,9 +163,7 @@ body {
 
 
 .produtos-colecao a:hover {
-    background-color: black;
-    color: white;
-    border-radius: 2px;
+    color: black;
     transform: scale(1.1);
     transition: ease-in-out 0.5s;
     

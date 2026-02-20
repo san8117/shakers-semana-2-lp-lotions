@@ -69,9 +69,7 @@ body {
 }
 
 .conteudo-home a:hover {
-    background-color: black;
-    color: white;
-    border-radius: 2px;
+    color: black;
     transform: scale(1.1);
     transition: ease-in-out 0.5s;
 }
