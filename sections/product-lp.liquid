@@ -1,0 +1,36 @@
+{{'product-lp.css' | asset_url | stylesheet_tag}}
+
+
+<div class="product-container">
+
+ 
+    <div class="produto">
+        <img src="{{product.featured_image |  image_url: width: 300 }}" alt="{{product.featured_image.alt}}">
+    
+    </div>
+    
+     <div class="compra">
+        <h2>{{product.title}}</h2>
+        <p><b>Preço:</b>{{product.price |  money}}</p>
+        <button>Comprar</button>
+    
+     </div>
+
+</div>
+
+
+
+
+
+
+{% schema %}
+{
+    "name": "product-lp",
+    "settings": [],
+    "presets": [
+        {
+            "name": "product-lp"
+        }
+    ]
+}
+{% endschema %}

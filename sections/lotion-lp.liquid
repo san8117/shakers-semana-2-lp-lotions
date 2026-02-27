@@ -1,25 +1,54 @@
-<header>
-  <h1>{{page.title}}</h1>
-</header>
-
-<section>
-   <main>
-    <p>{{page.content}}</p>
-
-    {% assign products = collections.all.products %}
-    
-   {%for produtos in products %}
-    <span>{{product}}</span>
-    {%endfor%}
-   </main>
-</section>
+{{'lotion-lp.css' | asset_url | stylesheet_tag}}
 
 
+<header class="cabecalho"><h1>{{page.title}}</h1></header>
+
+
+<body>
+    <section class="conteudo-lp">
+
+        <main>
+         <p>{{page.content}}</p>
+       
+
+        <div class="produto-principal-container">
+            <div class="produto-principal">
+                    {% assign product = section.settings.locao-principal%}
+                    <img src="{{product.featured_image | image_url: width: 150, height: 100}}"alt="{{product.featured_image.alt}}"/>
+                    <h2>{{product.title}}</h2>
+                    <p><b>Preço:</b>{{product.price | money}}</p>
+                    <a href="{{product.url}}">Saiba Mais</a>
+            </div>
+        </div>
+
+        
+
+        <section class="info-colecao">
+        {% assign collection = section.settings.colecao%}
+        <h3>{{collection.title}}</h3>
+        <p>{{collection.description}}</p>
+
+        </section>
 
 
 
+        </main>
 
 
+       
+            <div class="colecao">
+                {% for product in collection.products%}
+                    <div class="produtos-colecao">
+                    <img src="{{product.featured_image |  image_url: width: 100, height: 80}}" alt="{{product.featured_image.alt}}" />
+                    <h3>{{product.title}} </h3>
+                    <p><b>Preço:</b>{{product.price | money}}</p>
+                    <a href="{{product.url}}">Saiba Mais</a>
+                    </div>
+                {% endfor %}
+            </div>
+        
+    </section>
+</body>
 
 
 
@@ -28,12 +57,23 @@
 {
     "name": "lotion-lp",
     "settings": [
-        
+            {
+                "type" :"collection",
+                "id": "colecao",
+                "label": "Coleção"
+            },
+
+            {
+                "type": "product",
+                "id": "locao-principal",
+                "label": "Loção Principal"
+            }
         ],
 
     "presets": [{
         "name": "lotion-lp"
     }
+    
         
     ]
 }
